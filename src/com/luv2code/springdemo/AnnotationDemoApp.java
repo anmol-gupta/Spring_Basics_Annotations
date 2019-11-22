@@ -9,8 +9,9 @@ public class AnnotationDemoApp {
 		
 		//Retrieving the bean from the spring container in case of annotations is same as in case of xml config.
 		ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext("applicationContext.xml");
-		Coach tennisCoach = context.getBean("myTennisCoach",Coach.class);
+		Coach tennisCoach = context.getBean("tennisCoach",Coach.class);
 		System.out.println(tennisCoach.getDailyWorkout());
+		context.close();
 	}
 
 }
